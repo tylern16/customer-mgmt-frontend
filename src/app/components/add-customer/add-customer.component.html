@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Customer Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" 
+      [(ngModel)]="customer.name" name="name"
+      aria-describedby="emailHelp" placeholder="Enter New Customer Name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
