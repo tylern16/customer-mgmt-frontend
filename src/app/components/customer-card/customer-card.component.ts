@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Customer } from './customer';
-import { CustomerService } from './customer.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Customer } from 'src/app/customer';
+import { CustomerService } from 'src/app/customer.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-customer-card',
+  templateUrl: './customer-card.component.html',
+  styleUrls: ['./customer-card.component.css']
 })
-export class AppComponent implements OnInit{
+export class CustomerCardComponent implements OnInit{
   public customers: Customer[] = [];
 
   constructor(private customerService: CustomerService) {}

@@ -1,8 +1,14 @@
 <nav class="navbar">Bootstrap Navbar</nav>
 <h1>Customer Mgmt</h1>
-<a routerLink="/home" routerLinkActive="active">Home</a>
-<div *ngFor="let customer of customers">
-    <div>{{customer.name}}</div>
-</div>
+<ul>
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/customers" routerLinkActive="active">Customers</a></li>
+    <li><a routerLink="/home" routerLinkActive="active">Add Customers</a></li>
+</ul>
+
+
+
+
+
 
 <router-outlet></router-outlet>
