@@ -17,6 +17,10 @@ export class CustomerService {
     return this.http.get<Customer[]>(`${this.apiServerUrl}/customer/all`);
   }
 
+  public getCustomersById(customerId: number): Observable<Customer> {
+    return this.http.get<Customer>(`${this.apiServerUrl}/customer/${customerId}`);
+  }
+
   public addCustomer(customer: Customer): Observable<Customer> {
     return this.http.post<Customer>(`${this.apiServerUrl}/customer/add`, customer);
   }
