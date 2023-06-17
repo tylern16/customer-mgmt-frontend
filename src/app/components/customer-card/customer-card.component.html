@@ -1,3 +1,5 @@
 <div *ngFor="let customer of customers">
     <h3>{{customer.name}}</h3>
+    <button>View Dependents</button>
+    <i (click)="deleteCustomer(customer.id)" class="fa fa-trash"></i>
 </div>

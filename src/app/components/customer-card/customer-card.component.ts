@@ -28,4 +28,14 @@ export class CustomerCardComponent implements OnInit{
       }
     )
   }
+
+  deleteCustomer(customerId: number) {
+    this.customerService.deleteCustomer(customerId).subscribe(
+      (response) => {
+        console.log(response);
+        this.getCustomers();
+      },
+      (error: Error) => {console.log(error)}
+    )
+  }
 }
