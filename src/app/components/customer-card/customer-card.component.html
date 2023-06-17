@@ -1,5 +1,16 @@
-<div *ngFor="let customer of customers">
+<!-- <div *ngFor="let customer of customers">
     <h3>{{customer.name}}</h3>
     <button>View Dependents</button>
-    <i (click)="deleteCustomer(customer.id)" class="fa fa-trash"></i>
+    <i (click)= "deleteCustomer(customer.id)" class="fa fa-trash"></i>
+</div> -->
+
+<div class="card-container">
+    <div *ngFor="let customer of customers" class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{customer.name}}</h5>
+          <p class="card-text">List of Dependents</p>
+          <button>View Dependents</button><br>
+          <i (click)= "deleteCustomer(customer.id)" class="fa fa-trash"></i>
+        </div>
+    </div>
 </div>
