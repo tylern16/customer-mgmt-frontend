@@ -33,10 +33,13 @@ export class CustomerCardComponent implements OnInit{
   deleteCustomer(customerId: number) {
     this.customerService.deleteCustomer(customerId).subscribe(
       (response) => {
-        console.log(response);
+        console.log("deleted");
         this.getCustomers();
       },
-      (error: Error) => {console.log(error)}
+      (error: Error) => {
+        alert(error);
+        this.router.navigate(['/customers']);
+      }
     )
   }
 }
