@@ -22,7 +22,7 @@ export class CustomerService {
   }
 
   public addCustomer(customer: Customer): Observable<Customer> {
-    return this.http.post<Customer>(`${this.apiServerUrl}/addCustomer`, customer);
+    return this.http.post<Customer>(`${this.apiServerUrl}/add/customer`, customer);
   }
 
   public updateCustomer(customer: Customer): Observable<Customer> {

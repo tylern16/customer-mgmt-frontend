@@ -2,6 +2,7 @@
     <button (click)="goToAddDependents()">Add Dependent</button>
     <div *ngFor="let dependent of dependents">
         <div>{{dependent.name}}</div>
+        <button (click)="deleteDependent(dependent.id)">Delete Dependent</button>
     </div>
 </div>
 

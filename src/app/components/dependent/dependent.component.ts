@@ -40,5 +40,17 @@ export class DependentComponent implements OnInit {
   goToAddDependents() {
     this.router.navigate(['/add/dependent/' + this.customerId]);
   }
+
+  deleteDependent(dependentId: number) {
+    this.dependentService.deleteDependent(dependentId).subscribe(
+      (response) => {
+        console.log("deleted");
+        this.getDependents(this.customerId);
+      },
+      (error: Error) => {
+        alert(error);
+      }
+    )
+  }
   
 }
