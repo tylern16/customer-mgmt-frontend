@@ -9,6 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CustomerCardComponent } from './components/customer-card/customer-card.component';
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
 import { AddOrderComponent } from './components/add-order/add-order.component';
+import { DependentComponent } from './components/dependent/dependent.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddOrderComponent } from './components/add-order/add-order.component';
     HomeComponent,
     CustomerCardComponent,
     AddCustomerComponent,
-    AddOrderComponent
+    AddOrderComponent,
+    DependentComponent
   ],
   imports: [
     BrowserModule,

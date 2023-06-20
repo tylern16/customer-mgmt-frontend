@@ -38,8 +38,11 @@ export class CustomerCardComponent implements OnInit{
       },
       (error: Error) => {
         alert(error);
-        this.router.navigate(['/customers']);
       }
     )
+  }
+
+  viewDependents(customerId: number) {
+    this.router.navigate(['/dependents/' + customerId]);
   }
 }

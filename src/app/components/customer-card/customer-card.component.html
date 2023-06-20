@@ -9,7 +9,7 @@
         <div class="card-body">
           <h5 class="card-title">{{customer.name}} | {{customer.email}}</h5>
           <p class="card-text">List of Dependents</p>
-          <button>View Dependents</button><br>
+          <button (click)= "viewDependents(customer.id)">View Dependents</button><br>
           <i (click)= "deleteCustomer(customer.id)" class="fa fa-trash"></i>
         </div>
     </div>
