@@ -13,6 +13,7 @@ import { DependentComponent } from './components/dependent/dependent.component';
 import { AddDependentComponent } from './components/add-dependent/add-dependent.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RegisterComponent } from './components/register/register.component';
     DependentComponent,
     AddDependentComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

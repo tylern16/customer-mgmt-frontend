@@ -8,6 +8,7 @@ import { DependentComponent } from './components/dependent/dependent.component';
 import { AddDependentComponent } from './components/add-dependent/add-dependent.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'dependents/:customerId', component: DependentComponent},
   {path: 'add/dependent/:customerId', component: AddDependentComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'logout', component: LogoutComponent}
 ];
 
 @NgModule({
