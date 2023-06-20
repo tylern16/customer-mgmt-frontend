@@ -19,7 +19,7 @@ export class LoginComponent {
   public signIn(): void {
     //console.log(this.username + ", " + this.password);
     this.cognitoService.signIn(this.user).then(() => {
-      this.router.navigate(['/cards'])
+      this.router.navigate(['/home'])
     }).catch(() => {
       console.log("Error on signIn on login component");
     });

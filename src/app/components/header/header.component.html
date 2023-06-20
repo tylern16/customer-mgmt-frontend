@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/home">Customer Management App</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" *ngIf="isAuthenticated()" routerLinkActive="active" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" *ngIf="!isAuthenticated()" routerLinkActive="active" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="isAuthenticated()" routerLinkActive="active" routerLink="/logout">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="!isAuthenticated()" routerLinkActive="active" routerLink="/register">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
