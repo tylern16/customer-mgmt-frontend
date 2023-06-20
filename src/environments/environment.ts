@@ -1,3 +1,7 @@
 export const environment = {
-    apiBaseUrl: 'http://localhost:8080'
+    apiBaseUrl: 'http://localhost:8080',
+    cognito: {
+        userPoolId: 'us-east-1_L4OkB2Bho',
+        userPoolWebCliendId: '42bldeuv0s3822jp6t8ojja4vp'
+    }
 };

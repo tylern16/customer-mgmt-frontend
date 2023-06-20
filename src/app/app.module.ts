@@ -11,6 +11,8 @@ import { AddCustomerComponent } from './components/add-customer/add-customer.com
 import { AddOrderComponent } from './components/add-order/add-order.component';
 import { DependentComponent } from './components/dependent/dependent.component';
 import { AddDependentComponent } from './components/add-dependent/add-dependent.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AddDependentComponent } from './components/add-dependent/add-dependent.
     AddCustomerComponent,
     AddOrderComponent,
     DependentComponent,
-    AddDependentComponent
+    AddDependentComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
