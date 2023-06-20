@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Dependent } from 'src/app/dependent';
 import { DependentService } from 'src/app/dependent.service';
 
@@ -16,7 +16,8 @@ export class DependentComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private dependentService: DependentService
+    private dependentService: DependentService,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -34,6 +35,10 @@ export class DependentComponent implements OnInit {
         alert(error);
       }
     )
+  }
+
+  goToAddDependents() {
+    this.router.navigate(['/add/dependent/' + this.customerId]);
   }
   
 }

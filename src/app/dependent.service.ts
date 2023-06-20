@@ -17,4 +17,12 @@ export class DependentService {
     return this.http.get<Dependent[]>(`${this.apiServerUrl}/customer/${customerId}/dependents`);
   }
 
+  public addDependent(customerId: number, dependent: Dependent): Observable<Dependent> {
+    return this.http.post<Dependent>(`${this.apiServerUrl}/customer/${customerId}/dependents`, dependent);
+  }
+
+  public deleteDependent(dependentId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiServerUrl}/dependents/${dependentId}`);
+  }
+
 }

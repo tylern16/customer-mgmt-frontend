@@ -5,13 +5,15 @@ import { CustomerCardComponent } from './components/customer-card/customer-card.
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
 import { AddOrderComponent } from './components/add-order/add-order.component';
 import { DependentComponent } from './components/dependent/dependent.component';
+import { AddDependentComponent } from './components/add-dependent/add-dependent.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'customers', component: CustomerCardComponent},
   {path: 'add', component: AddCustomerComponent},
   {path: 'add/order', component: AddOrderComponent},
-  {path: 'dependents/:customerId', component: DependentComponent}
+  {path: 'dependents/:customerId', component: DependentComponent},
+  {path: 'add/dependent/:customerId', component: AddDependentComponent}
 ];
 
 @NgModule({

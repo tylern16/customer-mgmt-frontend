@@ -10,6 +10,7 @@ import { CustomerCardComponent } from './components/customer-card/customer-card.
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
 import { AddOrderComponent } from './components/add-order/add-order.component';
 import { DependentComponent } from './components/dependent/dependent.component';
+import { AddDependentComponent } from './components/add-dependent/add-dependent.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DependentComponent } from './components/dependent/dependent.component';
     CustomerCardComponent,
     AddCustomerComponent,
     AddOrderComponent,
-    DependentComponent
+    DependentComponent,
+    AddDependentComponent
   ],
   imports: [
     BrowserModule,

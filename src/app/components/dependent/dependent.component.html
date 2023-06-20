@@ -1,3 +1,7 @@
-<div *ngFor="let dependent of dependents">
-    <div>{{dependent.name}}</div>
+<div class="dependent-container">
+    <button (click)="goToAddDependents()">Add Dependent</button>
+    <div *ngFor="let dependent of dependents">
+        <div>{{dependent.name}}</div>
+    </div>
 </div>
+
