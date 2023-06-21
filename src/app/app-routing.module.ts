@@ -13,7 +13,7 @@ import { RouteGuardService } from './route-guard.service';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}, //  , canActivate: [RouteGuardService]
-  {path: 'home', component: HomeComponent, canActivate: [RouteGuardService]}, //, canActivate: [RouteGuardService]
+  {path: 'home', component: HomeComponent}, //, canActivate: [RouteGuardService]
   {path: 'customers', component: CustomerCardComponent},//  , canActivate: [RouteGuardService]
   {path: 'add', component: AddCustomerComponent}, //  , canActivate: [RouteGuardService]
   {path: 'add/order', component: AddOrderComponent},//  , canActivate: [RouteGuardService]

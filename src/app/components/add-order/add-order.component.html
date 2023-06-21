@@ -1,8 +1,61 @@
 <h1>Create Order</h1>
-<form>
-    <div class="form-group">
-      <label for="exampleFormControlFile1">Select Photo ID for Order</label>
-      <input type="file" (change)="onFileSelected($event)"  class="form-control-file" id="exampleFormControlFile1">
-      <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+<!-- <form (click)="onSubmit()">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Example file input</label>
+    <input type="file" class="form-control-file" (change)="onFileSelected($event)" id="exampleFormControlFile1">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+
+<!-- <div *ngFor="let progressInfo of progressInfos" class="mb-2">
+  <span>{{ progressInfo.fileName }}</span>
+  <div class="progress">
+    <div
+      class="progress-bar progress-bar-info progress-bar-striped"
+      role="progressbar"
+      attr.aria-valuenow="{{ progressInfo.percentage }}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      [ngStyle]="{ width: progressInfo.percentage + '%' }"
+    >
+      {{ progressInfo.percentage }}%
     </div>
-  </form>
+  </div>
+</div> -->
+
+<div class="form-group">
+  <label for="exampleFormControlTextarea1">{{description}}</label>
+  <textarea class="form-control" [(ngModel)]="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+<label class="btn btn-default">
+  <input type="file" accept="image/*" multiple (change)="selectFiles($event)" />
+</label>
+
+<button
+  class="btn btn-success"
+  [disabled]="!selectedFiles"
+  (click)="uploadFiles()"
+>
+  Upload
+</button>
+
+<div class="alert alert-light" role="alert">{{ message }}</div>
+
+<div class="card">
+  <div class="card-header">List of Images</div>
+  <ul
+    class="list-group list-group-flush"
+    *ngFor="let file of fileInfos | async"
+  >
+    <li class="list-group-item">
+      <p><a href="{{ file.url }}">{{ file.name }}</a></p>
+      <img src="{{ file.url }}" alt="{{ file.name }}" height="80px">
+    </li>
+  </ul>
+</div>
+
