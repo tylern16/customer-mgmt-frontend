@@ -1,11 +1,37 @@
-<h1>Customer Mgmt</h1>
+<!-- <h1>Customer Mgmt</h1>
 <ul>
     <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
     <li><a routerLink="/customers" routerLinkActive="active">Customers</a></li>
     <li><a routerLink="/add" routerLinkActive="active">Add Customers</a></li>
     <li><a routerLink="/order" routerLinkActive="active">View Orders</a></li>
     <li><a routerLink="/add/order" routerLinkActive="active">Create Order</a></li>
-</ul>
+</ul> -->
+
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Customer Management</h1>
+      <p>Use this app to register your customers and easily add their dependents. It includes order processing with photo ID upload so your customers can securely make purchase orders.</p>
+    </div>
+</div>
+
+<!-- https://getbootstrap.com/docs/4.0/examples/jumbotron/ -->
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-5">
+        <h2>Customers</h2>
+        <p>You can view your current customers as well as create unlimited new dependent for them. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <a class="btn btn-secondary" routerLink="/customers" routerLinkActive="active">View Customers</a>
+        <a class="btn btn-secondary" routerLink="/add" routerLinkActive="active">Add Customers</a>
+      </div>
+      <div class="col-md-5">
+        <h2>Orders</h2>
+        <p>View your current orders or create a new order. When creating a new order, you will be prompted to upload a photo Id to ensure security. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <a class="btn btn-secondary" routerLink="/order" routerLinkActive="active">View Orders</a>
+        <a class="btn btn-secondary" routerLink="/add/order" routerLinkActive="active">Create Order</a>
+      </div>
+    </div>
+</div>
 
 
 <router-outlet></router-outlet>
