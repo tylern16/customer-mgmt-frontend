@@ -18,6 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CommonModule } from '@angular/common';
 import { OrderComponent } from './components/order/order.component';
 import { OrderCardComponent } from './components/order-card/order-card.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { OrderCardComponent } from './components/order-card/order-card.component
     HeaderComponent,
     OrderComponent,
     OrderCardComponent,
+    FileUploadComponent,
   ],
   imports: [
     BrowserModule,

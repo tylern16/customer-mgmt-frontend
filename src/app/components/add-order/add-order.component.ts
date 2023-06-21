@@ -23,7 +23,7 @@ export class AddOrderComponent implements OnInit {
   saveCard(){
     this.orderService.addOrder(this.order).subscribe( data =>{
       console.log(data);
-      this.router.navigate(['/orders/' + this.order.id]);
+      this.router.navigate(['/order/' + this.order.id]);
     },
     (error: Error) => console.log(error));
   }
