@@ -16,6 +16,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CommonModule } from '@angular/common';
+import { OrderComponent } from './components/order/order.component';
+import { OrderCardComponent } from './components/order-card/order-card.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CommonModule } from '@angular/common';
     RegisterComponent,
     LogoutComponent,
     HeaderComponent,
+    OrderComponent,
+    OrderCardComponent,
   ],
   imports: [
     BrowserModule,

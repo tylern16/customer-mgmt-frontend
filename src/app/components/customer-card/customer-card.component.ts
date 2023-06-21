@@ -22,7 +22,7 @@ export class CustomerCardComponent implements OnInit{
     this.customerService.getCustomers().subscribe(
       (response: Customer[]) => {
         this.customers = response;
-        console.log("GetCustomers: ");
+        //console.log("GetCustomers: ");
       },
       (error: HttpErrorResponse) => {
         console.log(error);

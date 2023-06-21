@@ -1,0 +1,11 @@
+<div class="order-container">
+    <div *ngFor="let order of orders" class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{order.name}}</h5>
+          <p>{{order.date}}</p>
+          <p>{{order.description}}</p>
+          <button (click)= "viewOrderById(order.id)">View Order</button><br>
+          <i (click)= "deleteOrder(order.id)" class="fa fa-trash"></i>
+        </div>
+    </div>
+</div>

@@ -10,6 +10,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { RouteGuardService } from './route-guard.service';
+import { OrderComponent } from './components/order/order.component';
+import { OrderCardComponent } from './components/order-card/order-card.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}, //  , canActivate: [RouteGuardService]
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path: 'add/dependent/:customerId', component: AddDependentComponent},//  , canActivate: [RouteGuardService]
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'logout', component: LogoutComponent} //  , canActivate: [RouteGuardService]
+  {path: 'logout', component: LogoutComponent}, //  , canActivate: [RouteGuardService]
+  {path: 'order', component: OrderComponent},
+  {path: 'order/:orderId', component: OrderCardComponent}
 ];
 
 @NgModule({
