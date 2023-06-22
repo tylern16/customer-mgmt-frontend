@@ -1,8 +1,45 @@
+<div *ngIf="dependents.length==0" id="no-dependents">
+    <h3>This Customer has no Dependents. Add them below.</h3>
+    <button class="btn btn-success" (click)="goToAddDependents()">Add Dependent</button>
+</div>
+
+
+
+<div *ngIf="dependents.length>0" id="no-dependents">
+    <div id="dependents-title">
+        <h2>Dependents</h2>
+    </div>
+    
+    <table class="table table-striped table-bordered" id="dependent-table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dependent of dependents">
+            <th>{{dependent.name}}</th>
+            <td>{{dependent.email}}</td>
+            <td class="delete-dependent"><a (click)="deleteDependent(dependent.id)">Delete</a></td>
+          </tr>
+        </tbody>
+    </table>
+    
+    <button class="btn btn-success" (click)="goToAddDependents()">Add Dependent</button>
+</div>
+
+  <!-- <div *ngIf="dependents.length==0" id="no-dependents">
+    <h3>This Customer has no Dependents. Add them below.</h3>
+    <button class="btn btn-success" (click)="goToAddDependents()">Add Dependent</button>
+</div>
+
 <div class="dependent-container">
-    <button (click)="goToAddDependents()">Add Dependent</button>
     <div *ngFor="let dependent of dependents">
         <div>{{dependent.name}}</div>
-        <button (click)="deleteDependent(dependent.id)">Delete Dependent</button>
+        <button class="btn btn-success" (click)="deleteDependent(dependent.id)">Delete Dependent</button>
     </div>
-</div>
+</div> -->
+
 

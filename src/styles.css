@@ -66,3 +66,24 @@ i {
 .form-control {
     margin: 0.5em;
 }
+
+/* View dependents */
+
+#no-dependents {
+    text-align: center;
+    margin: 1em auto;
+}
+
+#dependents-title {
+    text-align: center;
+    margin: 1em auto;
+}
+
+#dependent-table {
+    width: 50%;
+}
+
+.delete-dependent {
+    cursor: pointer;
+    text-decoration: underline;
+}

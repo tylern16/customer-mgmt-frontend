@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Customer } from 'src/app/customer';
+import { CustomerService } from 'src/app/customer.service';
 import { Dependent } from 'src/app/dependent';
 import { DependentService } from 'src/app/dependent.service';
 
@@ -13,11 +15,11 @@ export class DependentComponent implements OnInit {
 
   customerId: number = this.route.snapshot.params['customerId'];
 
-
   constructor(
     private route: ActivatedRoute,
     private dependentService: DependentService,
-    private router: Router
+    private router: Router,
+    private customerService: CustomerService
   ){}
 
   ngOnInit(): void {
