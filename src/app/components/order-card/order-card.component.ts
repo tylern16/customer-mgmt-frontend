@@ -32,7 +32,7 @@ export class OrderCardComponent implements OnInit{
         //console.log("Get Dependents:" + this.dependents);
       },
       (error: Error) => {
-        alert(error);
+        console.log(error);
       }
     )
   }

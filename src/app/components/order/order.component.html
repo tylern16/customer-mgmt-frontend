@@ -1,4 +1,4 @@
-<div class="order-container">
+<!-- <div class="order-container">
     <div *ngFor="let order of orders" class="card text-center" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">{{order.name}}</h5>
@@ -8,4 +8,37 @@
           <i (click)= "deleteOrder(order.id)" class="fa fa-trash"></i>
         </div>
     </div>
+</div> -->
+
+<div id="table-button-bottom1">
+  <button class="btn btn-success"  routerLink="/add/order" routerLinkActive="active">Add Order</button>
 </div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Description</th>
+      <th scope="col">Order Details</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders" >
+      <td class='pointer' (click)= "viewOrderById(order.id)">{{order.name}}</td>
+      <td>{{order.date}}</td>
+      <td>{{order.price}}</td>
+      <td>{{order.description}}</td>
+      <td class="view-order"><a (click)= "viewOrderById(order.id)">Order Details</a></td>
+      <td class="delete-order"><i class="fa fa-trash" (click)= "deleteOrder(order.id)"></i></td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="table-button-bottom2">
+  <button class="btn btn-success"  routerLink="/add/order" routerLinkActive="active">Add Order</button>
+</div>
+
+<router-outlet></router-outlet>

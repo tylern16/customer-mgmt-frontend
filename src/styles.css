@@ -87,3 +87,32 @@ i {
     cursor: pointer;
     text-decoration: underline;
 }
+
+/* Add Dependent */
+
+#add-dependent-form {
+    width: 50%;
+    margin: 2em auto;
+}
+
+/* Order */
+
+.view-order {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.delete-order {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* Order From */
+
+#add-order-form {
+    width: 50%;
+    margin: 2em auto;
+}
