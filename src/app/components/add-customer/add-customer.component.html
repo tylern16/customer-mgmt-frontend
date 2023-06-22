@@ -1,13 +1,17 @@
-<form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="name">Customer Name</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" 
-      [(ngModel)]="customer.name" name="name"
-      aria-describedby="emailHelp" placeholder="Enter Customer Name">
-      <label for="name">Customer Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" 
-      [(ngModel)]="customer.email" name="email"
-      aria-describedby="emailHelp" placeholder="Enter Customer Email">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+<form (ngSubmit)="onSubmit()" id="add-customer-form">
+  <div class="form-group">
+    <h3>Add A New Customer</h3><br><br>
+
+    <label for="exampleInputEmail1">Customer Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" 
+    [(ngModel)]="customer.name" name="name"
+    aria-describedby="emailHelp" placeholder="Enter Customer Name">
+
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" 
+    [(ngModel)]="customer.email" name="email"
+    aria-describedby="emailHelp" placeholder="Email Address">
+
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>

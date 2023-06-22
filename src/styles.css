@@ -56,3 +56,13 @@ i {
 #table-button-bottom2 {
     text-align: center;
 }
+
+/* ADD CUSTOMER */
+#add-customer-form {
+    width: 50%;
+    margin: 2em auto;
+}
+
+.form-control {
+    margin: 0.5em;
+}
