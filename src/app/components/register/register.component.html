@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card">
+    <div class="card login">
       <div class="card-header">
         <h1>Sign Up</h1>
       </div>
@@ -13,13 +13,13 @@
       </div>
       <div class="card-footer">
         <div class="row">
-          <button (click)="signUp()" class="btn btn-success">Register</button>
+          <button (click)="signUp()" class="btn btn-success login-btn">Register</button>
         </div>
       </div>
     </div>
   
   
-    <div class="card" *ngIf="isConfirm">
+    <div class="card login" *ngIf="isConfirm">
       <div class="card-header">
         <h1>Confirm Email</h1>
       </div>
@@ -31,7 +31,7 @@
       <div class="card-footer">
         <div class="row">
           <button (click)="confirmSignUp()"
-                  class="btn btn-success">Confirm</button>
+                  class="btn btn-success login-btn">Confirm</button>
         </div>
       </div>
     </div>

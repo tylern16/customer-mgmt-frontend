@@ -45,4 +45,18 @@ export class CustomerCardComponent implements OnInit{
   viewDependents(customerId: number) {
     this.router.navigate(['/dependents/' + customerId]);
   }
+
+  // openModal() {
+  //   const modalDiv = document.getElementById('exampleModal1');
+  //   if (modalDiv != null) {
+  //     modalDiv.style.display = 'block';
+  //   }
+  // }
+
+  // closeModal() {
+  //   const modalDiv = document.getElementById("exampleModal1");
+  //   if (modalDiv != null) {
+  //     modalDiv.style.display = 'none';
+  //   }
+  // }
 }
