@@ -21,6 +21,38 @@ footer {
     margin: 1em;
 } 
 
+.customer-card-container {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.customer-card {
+    width: 16em;
+}
+
 i {
     cursor: pointer; 
+}
+
+.view-dependents {
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
+.delete-customer {
+    text-align: center;
+}
+
+.table {
+    width: 80%;
+    margin: 1em auto;
+}
+
+#table-button-bottom1 {
+    text-align: right;
+}
+
+#table-button-bottom2 {
+    text-align: center;
 }

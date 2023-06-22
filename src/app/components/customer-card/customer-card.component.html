@@ -4,13 +4,45 @@
     <i (click)= "deleteCustomer(customer.id)" class="fa fa-trash"></i>
 </div> -->
 
-<div class="card-container">
-    <div *ngFor="let customer of customers" class="card text-center" style="width: 18rem;">
+<!-- <div class="card-container customer-card-container">
+    <div *ngFor="let customer of customers" class="card customer-card">
         <div class="card-body">
-          <h5 class="card-title">{{customer.name}} | {{customer.email}}</h5>
-          <p class="card-text">List of Dependents</p>
-          <button (click)= "viewDependents(customer.id)">View Dependents</button><br>
-          <i (click)= "deleteCustomer(customer.id)" class="fa fa-trash"></i>
+          <h5 class="card-title">{{customer.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Email: {{customer.email}}</h6>
+          <button class="btn btn-primary" (click)= "viewDependents(customer.id)">View Dependents</button><br>
+          <button class="btn btn-primary" (click)= "deleteCustomer(customer.id)" >Delete Customer</button>
         </div>
     </div>
+</div> -->
+<div id="table-button-bottom1">
+    <button class="btn btn-success"  routerLink="/add" routerLinkActive="active">Add Customers</button>
 </div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">View Dependents</th>
+        <th scope="col">Delete Customer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers" >
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td class="view-dependents"><a (click)= "viewDependents(customer.id)">View Dependents</a></td>
+        <td class="delete-customer"><i class="fa fa-trash" (click)= "deleteCustomer(customer.id)"></i></td>
+      </tr>
+    </tbody>
+</table>
+
+<div id="table-button-bottom2">
+    <button class="btn btn-success"  routerLink="/add" routerLinkActive="active">Add Customers</button>
+</div>
+
+<router-outlet></router-outlet>
+
+
+  
+
