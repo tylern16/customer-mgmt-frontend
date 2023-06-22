@@ -116,3 +116,19 @@ i {
     width: 50%;
     margin: 2em auto;
 }
+
+/* Order Card - contains File Upload */
+.order-card-body {
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 2em auto;
+}
+
+/* File Upload */
+
+.upload-success {
+    margin: auto auto;
+    text-align: center;
+}

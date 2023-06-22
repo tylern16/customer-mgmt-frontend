@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FileUploadService } from 'src/app/file-upload.service';
 
+//lots of help from bezkoder's tutorials on this component
+
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
