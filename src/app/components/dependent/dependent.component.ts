@@ -13,6 +13,8 @@ import { DependentService } from 'src/app/dependent.service';
 export class DependentComponent implements OnInit {
   public dependents: Dependent[] = [];
 
+  public currentDependentId: number = 0;
+
   customerId: number = this.route.snapshot.params['customerId'];
 
   constructor(
@@ -53,6 +55,24 @@ export class DependentComponent implements OnInit {
         alert(error);
       }
     )
+
+    this.closeModal();
   }
-  
+
+  openModal(dependentId : number) {
+    this.currentDependentId = dependentId;
+    //console.log("open modal");
+    const modalDiv = document.getElementById('myModal');
+    if (modalDiv != null) {
+      modalDiv.style.display = 'block';
+    }
+  }
+
+  closeModal() {
+    console.log("close modal");
+    const modalDiv = document.getElementById("myModal");
+    if (modalDiv != null) {
+      modalDiv.style.display = 'none';
+    }
+  }
 }

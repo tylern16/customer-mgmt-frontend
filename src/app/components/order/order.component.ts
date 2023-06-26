@@ -11,6 +11,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class OrderComponent implements OnInit{
 
+  public currentOrderId = 0;
+
   public orders: Order[] = [];
 
   constructor(private orderService: OrderService, private router: Router) {}
@@ -41,10 +43,29 @@ export class OrderComponent implements OnInit{
         alert(error);
       }
     )
+
+    this.closeModal();
   }
 
   viewOrderById(orderId: number) {
     this.router.navigate(['/order/' + orderId]);
+  }
+
+  openModal(orderId : number) {
+    this.currentOrderId = orderId;
+    //console.log("open modal");
+    const modalDiv = document.getElementById('myModal');
+    if (modalDiv != null) {
+      modalDiv.style.display = 'block';
+    }
+  }
+
+  closeModal() {
+    console.log("close modal");
+    const modalDiv = document.getElementById("myModal");
+    if (modalDiv != null) {
+      modalDiv.style.display = 'none';
+    }
   }
 
 }

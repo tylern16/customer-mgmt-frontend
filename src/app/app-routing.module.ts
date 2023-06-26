@@ -14,18 +14,18 @@ import { OrderComponent } from './components/order/order.component';
 import { OrderCardComponent } from './components/order-card/order-card.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent}, //  , canActivate: [RouteGuardService]
-  {path: 'home', component: HomeComponent}, //, canActivate: [RouteGuardService]
-  {path: 'customers', component: CustomerCardComponent},//  
-  {path: 'add', component: AddCustomerComponent}, //  
-  {path: 'add/order', component: AddOrderComponent},//  
-  {path: 'dependents/:customerId', component: DependentComponent},//  
-  {path: 'add/dependent/:customerId', component: AddDependentComponent},//  
+  {path: '', component: HomeComponent, canActivate: [RouteGuardService]}, //  , canActivate: [RouteGuardService]
+  {path: 'home', component: HomeComponent, canActivate: [RouteGuardService]}, //, canActivate: [RouteGuardService]
+  {path: 'customers', component: CustomerCardComponent, canActivate: [RouteGuardService]},//  
+  {path: 'add', component: AddCustomerComponent, canActivate: [RouteGuardService]}, //  
+  {path: 'add/order', component: AddOrderComponent, canActivate: [RouteGuardService]},//  
+  {path: 'dependents/:customerId', component: DependentComponent, canActivate: [RouteGuardService]},//  
+  {path: 'add/dependent/:customerId', component: AddDependentComponent, canActivate: [RouteGuardService]},//  
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'logout', component: LogoutComponent}, //  , canActivate: [RouteGuardService]
-  {path: 'order', component: OrderComponent},
-  {path: 'order/:orderId', component: OrderCardComponent}
+  {path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService]}, //  , canActivate: [RouteGuardService]
+  {path: 'order', component: OrderComponent, canActivate: [RouteGuardService]},
+  {path: 'order/:orderId', component: OrderCardComponent, canActivate: [RouteGuardService]}
 ];
 
 @NgModule({
