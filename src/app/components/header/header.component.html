@@ -6,12 +6,20 @@
               <a class="nav-link" *ngIf="isAuthenticated()" routerLinkActive="active" routerLink="/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" *ngIf="isAuthenticated()" routerLinkActive="active" routerLink="/customers">Customers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="isAuthenticated()" routerLinkActive="active" routerLink="/order">Orders</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item auth">
               <a class="nav-link" *ngIf="!isAuthenticated()" routerLinkActive="active" routerLink="/login">Login</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item auth">
                 <a class="nav-link" *ngIf="isAuthenticated()" routerLinkActive="active" routerLink="/logout">Logout</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item auth">
                 <a class="nav-link" *ngIf="!isAuthenticated()" routerLinkActive="active" routerLink="/register">Register</a>
             </li>
         </ul>

@@ -14,16 +14,16 @@ import { OrderComponent } from './components/order/order.component';
 import { OrderCardComponent } from './components/order-card/order-card.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent}, //  , canActivate: [RouteGuardService]
-  {path: 'home', component: HomeComponent}, //, canActivate: [RouteGuardService]
-  {path: 'customers', component: CustomerCardComponent},//  , canActivate: [RouteGuardService]
-  {path: 'add', component: AddCustomerComponent}, //  , canActivate: [RouteGuardService]
+  {path: '', component: HomeComponent , canActivate: [RouteGuardService]}, //  , canActivate: [RouteGuardService]
+  {path: 'home', component: HomeComponent , canActivate: [RouteGuardService]}, //, canActivate: [RouteGuardService]
+  {path: 'customers', component: CustomerCardComponent, canActivate: [RouteGuardService]},//  , canActivate: [RouteGuardService]
+  {path: 'add', component: AddCustomerComponent, canActivate: [RouteGuardService]}, //  , canActivate: [RouteGuardService]
   {path: 'add/order', component: AddOrderComponent},//  , canActivate: [RouteGuardService]
   {path: 'dependents/:customerId', component: DependentComponent},//  , canActivate: [RouteGuardService]
-  {path: 'add/dependent/:customerId', component: AddDependentComponent},//  , canActivate: [RouteGuardService]
+  {path: 'add/dependent/:customerId', component: AddDependentComponent, canActivate: [RouteGuardService]},//  , canActivate: [RouteGuardService]
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'logout', component: LogoutComponent}, //  , canActivate: [RouteGuardService]
+  {path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService]}, //  , canActivate: [RouteGuardService]
   {path: 'order', component: OrderComponent},
   {path: 'order/:orderId', component: OrderCardComponent}
 ];
