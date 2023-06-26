@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Customer } from 'src/app/customer';
 import { CustomerService } from 'src/app/customer.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-customer-card',
@@ -12,7 +13,13 @@ import { CustomerService } from 'src/app/customer.service';
 export class CustomerCardComponent implements OnInit{
   public customers: Customer[] = [];
 
-  constructor(private customerService: CustomerService, private router: Router) {}
+  public currentCustomerId!: number;
+
+  constructor(
+    private customerService: CustomerService, 
+    private router: Router,
+    private matDialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.getCustomers();
@@ -40,23 +47,31 @@ export class CustomerCardComponent implements OnInit{
         alert(error);
       }
     )
+
+    const modalDiv = document.getElementById("myModal");
+    if (modalDiv != null) {
+      modalDiv.style.display = 'none';
+    }
   }
 
   viewDependents(customerId: number) {
     this.router.navigate(['/dependents/' + customerId]);
   }
 
-  // openModal() {
-  //   const modalDiv = document.getElementById('exampleModal1');
-  //   if (modalDiv != null) {
-  //     modalDiv.style.display = 'block';
-  //   }
-  // }
+  openModal(customerId : number) {
+    this.currentCustomerId = customerId;
+    //console.log("open modal");
+    const modalDiv = document.getElementById('myModal');
+    if (modalDiv != null) {
+      modalDiv.style.display = 'block';
+    }
+  }
 
-  // closeModal() {
-  //   const modalDiv = document.getElementById("exampleModal1");
-  //   if (modalDiv != null) {
-  //     modalDiv.style.display = 'none';
-  //   }
-  // }
+  closeModal() {
+    console.log("close modal");
+    const modalDiv = document.getElementById("myModal");
+    if (modalDiv != null) {
+      modalDiv.style.display = 'none';
+    }
+  }
 }
